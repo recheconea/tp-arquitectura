@@ -1,4 +1,4 @@
-# 75.73 - Arquitectura de software | Trabajo Práctico 
+# 75.73 - Arquitectura de software
 ## Enunciado
 ### Node.JS y modelo compartido
 
@@ -7,6 +7,7 @@ Para todos los puntos, se deben indicar las referencias a las fuentes de informa
 1. ¿Cuáles son las características principales de Node.JS que lo diferencian de otras plataformas?
 2. Investigar patrones de uso o buenas prácticas de desarrollo sobre Node.JS. Mencionar al menos 3 de forma breve.
 3. Investigar formas de compartir el modelo entre el cliente (browser) y el server (Node.JS)
+
  a. Seleccionar una de esas formas y describirla brevemente  
  b. ¿Es siempre conveniente compartir el modelo entre client y server? Mencionar al menos 1 caso en que lo sea, y otro caso en que no lo sea
  
