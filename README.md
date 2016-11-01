@@ -14,10 +14,15 @@
 
 Las principales caracteristicas de Node.JS son:
  - Programación asincrónica
+ 	- **Describir caracteristica**
  - Desarrollado en javascript
+ 	- **Describir caracteristica**
  - Programación orientada a eventos
+ 	- **Describir caracteristica**
  - Uso del motor V8
- - Mayor velocidad
+ 	- **Describir caracteristica**
+ - Mayor velocidad de respuesta
+ 	- **Describir caracteristica**
 
 ## Patrones de uso o buenas prácticas de desarrollo sobre Node.JS
  
@@ -82,8 +87,8 @@ myAsyncFunction({
 ```
 
 ## Compartir el modelo entre el cliente y el server
-
-  a. Seleccionar una de esas formas y describirla brevemente
+	
+	Dado una arquitectura cliente/servidor, existen varias maneras de compartir el modelo. En el caso donde el cliente sea un browser y el servidor este realizado en Node.js, una opción es utilizar desde el lado del browser una página del tipo SPA, esto
 
   b. ¿Es siempre conveniente compartir el modelo entre client y server? Mencionar al menos 1 caso en que lo sea, y otro caso en que no lo sea
 
@@ -96,7 +101,9 @@ Dado el siguiente enunciado: FIUBA desea construir un sistema que permita, para 
 
 ## Referencias
 - [Node.JS](https://nodejs.org)
-- [Wikipedia](https://es.wikipedia.org/wiki/Node.js)
+- [Wikipedia-Node.js](https://es.wikipedia.org/wiki/Node.js)
+- [Wikipedia-SPA](https://es.wikipedia.org/wiki/Single-page_application)
 - [Heroku](https://blog.heroku.com/node-habits-2016)
 - [https://github.com/alanjames1987/Node.js-Best-Practices](https://github.com/alanjames1987/Node.js-Best-Practices)
 - [http://thenodeway.io/](http://thenodeway.io/)
+- [http://jeffamcgee.com/sharing-models-between-node-and-the-browser.html](http://jeffamcgee.com/sharing-models-between-node-and-the-browser.html)
