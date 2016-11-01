@@ -17,25 +17,35 @@ Las principales caracteristicas de Node.JS son:
  - Desarrollado en javascript
  - Programación orientada a eventos
  - Uso del motor V8
- - Velocidad
+ - Mayor velocidad
 
 ## Patrones de uso o buenas prácticas de desarrollo sobre Node.JS
  
-#### Start every new project with npm init
- 
-#### Always Use Asynchronous Methods 
-The two most powerful aspect of Node.js are it's non-blocking IO and asynchronous runtime. Both of these aspects of Node.js are what give it the speed and robustness to serve more requests faster than other languages.
+#### Siempre iniciar un nuevo proyecto con npm init
 
-In order to take advantage of these features you have to always use asynchronous methods in your code. Below is an example showing the good and bad way to read files from a system.
+El comando _npm init_ generará un archivo package.json válido para su proyecto, deduciendo propiedades comunes del directorio de trabajo.
 
-The Bad Way reads a file from disk synchronously.
+```
+$ mkdir my-awesome-app
+$ cd my-awesome-app
+$ npm init --yes
+```
+
+#### Usar metodos asincrónicos
+
+Los dos aspectos más potentes de Node.js son IO no bloqueante y runtime asíncrono. Ambos aspectos de Node.js son lo que le dan la velocidad y la solidez para atender solicitudes más rápido que otros lenguajes.
+
+Con el fin de aprovechar estas características siempre tiene que utilizar métodos asíncronos en su código. A continuación se muestra un ejemplo que muestra la buena y mala forma de leer archivos de un sistema.
+
+Leer un archivo del disco sincrónicamente no es una buena práctica.
 
 ```javascript
 var data = fs.readFileSync('/path/to/file');
 console.log(data);
 // use the data from the file
-``` 
-The Good Way reads a file from disk asynchronously.
+```
+
+Lee un archivo del disco asincrónicamente es una buena práctica.
 
 ```javascript
 fs.readFile('/path/to/file', function (err, data) {
@@ -44,18 +54,14 @@ fs.readFile('/path/to/file', function (err, data) {
     console.log(data);
 });
 ``` 
-When a synchronous function is invoked the entire runtime halts. For example, above The Bad Way halts the execution of any other code that could be running while the file is read into memory. This means no users get served during this time. If your file takes five minutes to read into memory no users get served for five minutes.
+Cuando se invoca una función síncrona, todo el hilo de ejecución se detiene. Por ejemplo, utilizando la lectura sincronica se detiene la ejecución de cualquier otro código que podría estar ejecutándose mientras el archivo se lee. Esto significa que no se servirá a ningún usuario durante este tiempo. Si su archivo tarda cinco minutos en leerse, ningún usuario recibe servicio durante cinco minutos.
 
-By contrast The Good Way reads the file into memory without halting the runtime by using an asynchronous method. This means that if your file takes five minutes to read into memory all your users continue to get served.
+Por el contrario, de manera asincrónica se lee el archivo sin detener el hilo de ejecución. Esto significa que si su archivo tarda cinco minutos en leer en la memoria, todos los usuarios continúan recibiéndo servicio.
 
+#### Siempre chequear errores en los Callbacks
 
-
-
-#### Always Check for "error" in Callbacks
-
-As stated above, by convention an error is always the first parameter passed to any callback function. This is great for making sure your site doesn't crash and that you can detect errors when they happen.
-
-Now that you know what they are you should start using them. If your database query errors out you need to check for that before using the results. I'll give you an example.
+Es conveniente chequear los errores en los callbacks debido a que cuando se ejecute esta funcion de callback, esta puede no ejecutarse de manera correcta. Al no chequear este error se estaría asumiendo que la ejecución siempre es exitosa, lo cual genera un riesgo al estar sembrando el código de posibles bus.
+Un ejemplo de como utilizar esta buena práctica es el siguiente.
 
 ```javascript
 myAsyncFunction({
@@ -78,12 +84,13 @@ myAsyncFunction({
 ## Compartir el modelo entre el cliente y el server
 
   a. Seleccionar una de esas formas y describirla brevemente
+
   b. ¿Es siempre conveniente compartir el modelo entre client y server? Mencionar al menos 1 caso en que lo sea, y otro caso en que no lo sea
-aasd
 
 ## Desarrollo con Node.JS 
 
 Dado el siguiente enunciado: FIUBA desea construir un sistema que permita, para un cuatrimestre dado, enumerar los cursos ofrecidos por materia y la inscripción a los cursos.
+
   a. Desarrolle un sistema simple utilizando Node.JS, haciendo uso de lo investigado. No se requiere que el sistema persista datos en un almacenamiento durable (i.e. Base de datos).
 
 
