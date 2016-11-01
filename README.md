@@ -1,6 +1,7 @@
 # 75.73 - Arquitectura de software
 ## Node.JS y modelo compartido
-![logo](https://github.com/recheconea/tp-arquitectura/blob/master/resources/logo.png)
+
+![logo](https://github.com/recheconea/tp-arquitectura/blob/master/resources/logo2.png)
 
 ### Indice
 
