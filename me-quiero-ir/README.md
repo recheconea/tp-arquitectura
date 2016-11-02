@@ -1,3 +1,0 @@
-# mequiero.ir
-
-## Get started
