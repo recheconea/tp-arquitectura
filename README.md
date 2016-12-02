@@ -16,13 +16,13 @@ Las principales caracteristicas de Node.JS son:
  - Programación asincrónica
  	- **Describir caracteristica**
  - Desarrollado en javascript
- 	- **Describir caracteristica**
+ 	- Javascript es un lenguaje de programacion ampliamente utilizado en front end. Con NodeJs tenemos la posibilidad de usarlo tambien para backend. Esto reporta una ventaja ya que utilizamos un solo lenguaje a lo largo de todo el desarrollo. Ademas, javascript es muy eficiente con bases de datos no relacionales orientadas a documentos, como es el caso de mongoDB. Estas bases de datos que utilizan json son especialmente buenas con javascript, dado que permite una traduccion simple entre un objeto y un documento de la base.
  - Programación orientada a eventos
  	- **Describir caracteristica**
  - Uso del motor V8
- 	- **Describir caracteristica**
+ 	- V8 es un motor de javascript de alto rendimiento desarrollado por Google. El mismo se encuentra escrito en C++ y es utilizado en aplicaciones como Chromium o el propio NodeJs. Este motor implementa ECMAScripts y corre en una amplia gama de plataformas. La ventaja de V8 es que compila Javascript a codigo maquina, brindando, de esta forma, una gran velocidad a la hora de ejecutar. Ademas se encarga, entre otras cosas, del manejo de memoria y de recolector de basura.
  - Mayor velocidad de respuesta
- 	- **Describir caracteristica**
+ 	- Ademas de la ventaja en velocidad a causa dle motor v8 explicada en el punto anterior, la velocidad de nodeJs radica en el Event Loop. El enfoque tradicional de las operaciones de I/O, tanto asincronico como sincronico, es altamente ineficiente, consume muchos recursos y es complicado de programar. Como contrapartida, lo que NodeJs hace es que cuando surge la necesidad de una operacion I/O, envia una tarea astincronica al loop de eventos, junto con un callback, y luego continua con la ejecucion. Una vez que dicha operacion esta completada, el event loop retoma la ejecucion y ejecuta el callback.
 
 ## Patrones de uso o buenas prácticas de desarrollo sobre Node.JS
  
