@@ -88,11 +88,13 @@ myAsyncFunction({
 });
 ```
 
-## Compartir el modelo entre el cliente y el server
+## Investigar formas de compartir el modelo entre el cliente (browser) y el server (Node.JS)
+ a. Seleccionar una de esas formas y describirla brevemente  
 	
-	Dado una arquitectura cliente/servidor, existen varias maneras de compartir el modelo. En el caso donde el cliente sea un browser y el servidor este realizado en Node.js, una opción es utilizar desde el lado del browser una página del tipo SPA, esto
+	Dado una arquitectura cliente/servidor, existen varias maneras de compartir el modelo. En el caso donde el cliente sea un browser y el servidor este realizado en Node.js, una opción es utilizar desde el lado del browser una página del tipo SPA. Una aplicacion SPA tiene su propio modelo que se complementa con el del server. De esta manera evitamos la necesidad de una comunicacion constante con el cliente para agilizar los tiempos.
 
   b. ¿Es siempre conveniente compartir el modelo entre client y server? Mencionar al menos 1 caso en que lo sea, y otro caso en que no lo sea
+  Al compartir un modelo entre el cliente y el servidor tenemos una perdida en lo que es la mantenibilidad. Cada vez que hagamos un cambio al modelo, habra que reflejarlo tanto en el cliente como en el servidor. Esto no es un problema mayor si tenemos acceso al cliente, pero si no lo tenemos no podremos actualizarlo, y, por lo tanto, dejara de sernos util para el modelo actualizado.
 
 ## Desarrollo con Node.JS 
 
